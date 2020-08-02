@@ -17,7 +17,7 @@ int main() {
 	        cin>>arr[i];
 	    }
 	    int temp=1;
-	    for(int i=0; i<size/2; i++){
+	    for(int i=0; i<=size/2; i++){
 	        if(arr[i]==temp or arr[i] == temp+1){
     	        if(arr[i]==arr[size-i-1]){
     	            temp = arr[i];
@@ -30,13 +30,9 @@ int main() {
     	        temp = arr[i];
 	        }
      	    else{
-     	        cout<<"break2"<<endl;
-     	        cout<<arr[i]<<" != "<<temp<<endl;
      	        status = false;
      	        break;
      	    }
-	        temp = arr[i];
-	        cout<<"temp = "<<temp<<endl;
 	    }
 	    if(status){
 	        cout<<"yes"<<endl;
