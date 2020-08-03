@@ -1,4 +1,3 @@
-```cpp
 Invocation failed [COMPILATION_ERROR]
 Can't compile file:
 program.cpp: In function 'int main()':
@@ -98,13 +97,13 @@ In file included from C:/Programs/mingw-w64-7/lib/gcc/i686-w64-mingw32/7.3.0/inc
 C:/Programs/mingw-w64-7/lib/gc
 =====
 Used: 0 ms, 0 KB
-```
+
 
 I found the exact same error on GitHub: https://github.com/HowardHinnant/date/issues/205
 However, all the solutions provided in the page above do not work for me. 
 
 I also tried changing my compiler to GCC, but it gives me the error:
-```cpp
-program.c:1:20: fatal error: iostream: No such file or directory
-compilation terminated.
-```
+
+>program.c:1:20: fatal error: iostream: No such file or directory
+>compilation terminated.
+
