@@ -6,11 +6,11 @@ using namespace std;
 
 int main(){
     int n, k, q;
-    cin <<n<<k<<q;
+    cin >>n>>k>>q;
     int arr[100000] = {};
     while(n){
         int l, r;
-        cin<<l<<r;
+        cin>>l>>r;
         arr[l]++;
         arr[r+1]--;
         n--;
@@ -30,7 +30,7 @@ int main(){
     }
     while(q){
         int s, e;
-        cin<<s<<e;
+        cin>>s>>e;
         int count;
         for(int i = s; i<=e; i++){
             if(ps[i] == 1){
