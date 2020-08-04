@@ -10,7 +10,7 @@ int main() {
 	while(cases){
 	    int size;
 	    cin>>size;
-	    //cout<<size;
+	    int count = 1;
 	    bool status = true;
 	    int arr[size];
 	    for(int i=0; i<size; i++){
@@ -32,15 +32,25 @@ int main() {
      	    else{
      	        status = false;
      	        break;
+     	   }
+     	    if(arr[i]==temp+1){
+     	        count++;
+     	        continue;
      	    }
 	    }
-	    if(status){
-	        cout<<"yes"<<endl;
-	    }
-	    else{
-	        cout<<"no"<<endl;
-	    }
-	    cases--;
+	   if(count==7){
+	       if(status){
+    	        cout<<"yes"<<endl;
+    	    }
+    	    else{
+    	        cout<<"no"<<endl;
+    	    }
+	   }
+	   else{
+	       cout<<"no"<<endl;
+	   }
+	   cases--;
 	}
 	return 0;
 }
+
