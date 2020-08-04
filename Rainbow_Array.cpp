@@ -23,14 +23,12 @@ int main() {
     	            continue;
     	        }
     	        else{
-    	            cout<<"f1"<<endl;
     	            status = false;
     	            break;
     	        }
     	        temp = arr[i];
 	        }
      	    else{
-     	        cout<<"f2"<<" i "<<i<<" temp "<<temp<<endl;
      	        status = false;
      	        break;
      	   }
