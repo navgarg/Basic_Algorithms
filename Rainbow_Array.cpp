@@ -10,45 +10,41 @@ int main() {
 	while(cases){
 	    int size;
 	    cin>>size;
-	    int count = 1;
 	    bool status = true;
 	    int arr[size];
 	    for(int i=0; i<size; i++){
 	        cin>>arr[i];
 	    }
 	    int temp=1;
-	    for(int i=0; i<=size/2; i++){
+	    for(int i=0; i<=(size/2); i++){
 	        if(arr[i]==temp or arr[i] == temp+1){
     	        if(arr[i]==arr[size-i-1]){
     	            temp = arr[i];
     	            continue;
     	        }
     	        else{
+    	            cout<<"f1"<<endl;
     	            status = false;
     	            break;
     	        }
     	        temp = arr[i];
 	        }
      	    else{
+     	        cout<<"f2"<<" i "<<i<<" temp "<<temp<<endl;
      	        status = false;
      	        break;
      	   }
-     	    if(arr[i]==temp+1){
-     	        count++;
-     	        continue;
-     	    }
+     	    
 	    }
-	   if(count==7){
-	       if(status){
-    	        cout<<"yes"<<endl;
-    	    }
-    	    else{
-    	        cout<<"no"<<endl;
-    	    }
+	   if(arr[size/2]!=7){
+	       status = false;
 	   }
-	   else{
-	       cout<<"no"<<endl;
-	   }
+	   if(status){
+	        cout<<"yes"<<endl;
+	    }
+	    else{
+	        cout<<"no"<<endl;
+	    }
 	   cases--;
 	}
 	return 0;
