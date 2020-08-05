@@ -7,7 +7,7 @@ using namespace std;
 int main(){
     int n, k, q;
     cin >>n>>k>>q;
-    int arr[100000] = {};
+    int arr[200000] = {};
     while(n){
         int l, r;
         cin>>l>>r;
@@ -15,12 +15,12 @@ int main(){
         arr[r+1]--;
         n--;
     }
-    int ps[100000] = {};
+    int ps[200000] = {};
     ps[0] = arr[0];
-    for(int i=1; i<=1000000; i++){
+    for(int i=1; i<=200000; i++){
         ps[i] = ps[i-1] + arr[i];
     }
-    for(int i=0; i<=100000; i++){
+    for(int i=0; i<=200000; i++){
         if(ps[i] >= k){
             ps[i] = 1;
         }
