@@ -33,9 +33,7 @@ int main(){
         cin>>s>>e;
         int count = 0;
         for(int i = s; i<=e; i++){
-            if(ps[i] == 1){
-                count++;
-            }
+            count += ps[i];
         }
         cout<<count;
         q--;
