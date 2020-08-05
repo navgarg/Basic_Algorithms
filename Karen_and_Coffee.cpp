@@ -31,11 +31,11 @@ int main(){
     while(q){
         int s, e;
         cin>>s>>e;
-        int count = 0;
-        for(int i = s; i<=e; i++){
-            count += ps[i];
+        int count[200001] = {};
+        for(int i=s; i<=200001; i++){
+            count[i] = count[i-1] + ps[i];
         }
-        cout<<count;
+        cout<<count[e]<<endl;
         q--;
     }
     return 0;
