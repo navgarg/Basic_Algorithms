@@ -2,6 +2,7 @@ Link to problem: https://codeforces.com/contest/816/problem/B
 Code:
 
 #include <iostream>
+#include <numeric>
 using namespace std;
 
 int main(){
@@ -28,14 +29,14 @@ int main(){
             ps[i] = 0;
         }
     }
+    int count[200001] = {};
+    for(int i=0; i<=200001; i++){
+            count[i] = count[i-1] + ps[i];
+        }
     while(q){
         int s, e;
         cin>>s>>e;
-        int count[200001] = {};
-        for(int i=s; i<=200001; i++){
-            count[i] = count[i-1] + ps[i];
-        }
-        cout<<count[e]<<endl;
+        cout<<count[e] - count[s-1]<<endl;
         q--;
     }
     return 0;
