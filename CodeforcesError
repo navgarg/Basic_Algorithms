@@ -95,5 +95,5 @@ program.cpp:6:11: note:   'std::istream {aka std::basic_istream<char>}' is not d
 In file included from C:/Programs/mingw-w64-7/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/iostream:39:0,
                  from program.cpp:1:
 C:/Programs/mingw-w64-7/lib/gc
-=====
+======
 Used: 0 ms, 0 KB
