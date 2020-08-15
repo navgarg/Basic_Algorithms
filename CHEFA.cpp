@@ -16,7 +16,7 @@ int main() {
 	        cin>>arr[i];
 	    }
 	    sort(arr, arr+num); 
-	    int sum=0;
+	    long long sum=0;
 	    for(int i=1; i<=num; i+=2){
 	        sum += arr[num-i];
 	    }
